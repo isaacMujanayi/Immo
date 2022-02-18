@@ -13,6 +13,8 @@ class HomeController extends AbstractController
      */
     public function home(): Response
     {
+        $property = $this->repository->findLatest();
         return $this->render('home/home.html.twig');
     }
+    
 }
